@@ -5,3 +5,5 @@ services:
 
 before_install:
   - docker build -t hojatvb/mohajer -f Dockerfile.dev .
+
+deploy:
