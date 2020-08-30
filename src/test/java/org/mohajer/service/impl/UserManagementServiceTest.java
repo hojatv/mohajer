@@ -42,6 +42,7 @@ public class UserManagementServiceTest {
         agent.setName(agentDTO.getName());
         agent.setId(1L);
         return agent;
+
     }
 
     private AgentDTO createAgentDto() {

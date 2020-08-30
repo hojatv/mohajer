@@ -2,4 +2,10 @@ language: java
 sudo: required
 services:
   - docker
+before_install:
+  -docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
+  -docker build -t "$DOCKER_USER"/mohajer -f Dockerfile.dev
 
+deploy:
+  mvn clean install
+  docker push hojatvb/mohajer
